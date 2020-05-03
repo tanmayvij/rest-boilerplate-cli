@@ -3,6 +3,7 @@ Command Line Interface to create boilerplate app for building a REST API using N
 
 ## Usage:
 `npm i -g rest-boilerplate-cli`
+
 `rest init <projectname>`
 
 ## Options:
