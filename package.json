@@ -1,0 +1,29 @@
+{
+    "name": "rest-boilerplate-cli",
+    "version": "1.0.0",
+    "description": "Command Line Interface to create boilerplate app for building a REST API using Node.js & Express.",
+    "main": "cli.js",
+    "bin": {
+        "rest": "./cli.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tanmayvij/rest-boilerplate-cli.git"
+    },
+    "author": "Tanmay Vij",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tanmayvij/rest-boilerplate-cli/issues"
+    },
+    "homepage": "https://github.com/tanmayvij/rest-boilerplate-cli#readme",
+    "dependencies": {
+        "@octokit/auth": "^2.0.0",
+        "@octokit/rest": "^17.6.0",
+        "chalk": "^4.0.0",
+        "commander": "^5.1.0",
+        "configstore": "^5.0.1",
+        "figlet": "^1.4.0",
+        "inquirer": "^7.1.0",
+        "simple-git": "^2.2.0"
+    }
+}
