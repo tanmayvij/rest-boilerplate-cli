@@ -1,6 +1,6 @@
 {
     "name": "rest-boilerplate-cli",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "description": "Command Line Interface to create boilerplate app for building a REST API using Node.js & Express.",
     "main": "cli.js",
     "bin": {
