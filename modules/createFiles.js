@@ -4,27 +4,25 @@ const fs = require("fs");
 const { exec } = require("child_process");
 
 module.exports = (projectname, packageJsonContent) => {
-    console.info("Creating package.json file...");
+    console.info("> Initializing Node Project");
     fs.writeFileSync(projectname + "/package.json", packageJsonContent);
-    console.info("Done.\n");
+    console.info("> Done.\n");
 
-    console.info("Initializing git repository...");
+    console.info("> Initializing git repository");
     exec(`cd ${projectname} && git init`);
-    console.info("Done.\n");
+    console.info("> Done.\n");
 
-    console.info("Creating .gitignore file...");
+    console.info("> Creating .gitignore");
     fs.writeFileSync(projectname + "/.gitignore", "node_modules/");
-    console.info("Done.\n");
+    console.info("> Done.\n");
 
-    console.info("Creating README.md file...");
     fs.writeFileSync(projectname + "/README.md", "# REST API Boilerplate created using [rest-boilerplate-cli](https://npmjs.com/package/rest-boilerplate-cli)");
-    console.info("Done.\n");
-
-    console.info("Installing express...");
-    exec(`cd ${projectname} && npm i express`);
-    console.info("Done.\n");
     
-    console.info("Setting up boilerplate code...");
+    console.info("> Installing Dependencies");
+    exec(`cd ${projectname} && npm i express morgan body-parser cors`);
+    console.info("> Done.\n");
+    
+    console.info("> Setting up project");
     createBoilerplate(projectname);
-    console.info("Done.\n");
+    console.info("> Done.\n");
 }
