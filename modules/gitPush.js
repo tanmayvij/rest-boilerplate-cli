@@ -10,9 +10,11 @@ module.exports = async (projectname, url) => {
             "message": "Commit Message?",
             "default": "App created using rest-boilerplate-cli"
         })).commit;
-        console.info("Adding remote 'origin'...");
+        
+        console.info("> Adding remote 'origin'");
         await git(projectname).addRemote("origin", url);
-        console.info("Staging changes...");
+        
+        console.info("> Staging changes");
         await git(projectname).add([
             '.gitignore',
             'app.js',
@@ -21,11 +23,14 @@ module.exports = async (projectname, url) => {
             'README.md',
             'system'
         ]);
-        console.info("Creating commit with message '" + commit + "'...");
+        
+        console.info("> Creating initial commit");
         await git(projectname).commit(commit);
-        console.info("Pushing to master branch...");
+        
+        console.info("> Pushing to master branch");
         await git(projectname).push("origin", "master");
-        console.info("Done.");
+        
+        console.info("> Done");
     }
     catch(e) {
         console.info(e);

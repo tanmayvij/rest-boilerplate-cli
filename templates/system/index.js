@@ -1,10 +1,10 @@
-const express = require("express");
-const router = express.Router();
+const { Router: er } = require("express");
+const router = er();
 
 // Create your routes here
 
-router.route("/").get(require("./modules/get"));
+router.get("/", require("./modules/get"));
 
-router.route("/").post(require("./modules/post"));
+router.post("/", require("./modules/post"));
 
 module.exports = router;
